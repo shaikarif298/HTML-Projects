@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: blue;
+            margin-left: 200px;
+            /* display: flex; */
+        }
+    </style>
+</head>
+<body >
+    <div>
+    <form>
+        <h1 style="text-align: left;">Login Page</h1>
+
+        <table style="text-align: left; border: 1px solid green;">
+            <br>
+            <tr>
+                <td><label>Enter loginId</label></td>
+               <td><input type="text" id="loginId" placeholder="Enter loginId"></td>
+            </tr>
+            <tr><td><p id="login_error"></p></td></tr>
+            <tr>
+                <td><label>Enter Password</label></td>
+                <td><input type="password" id="password" placeholder="Enter Password"></td>
+            </tr >
+            <tr><td>
+                <p id="length_error"></p>
+                <ul>
+                <li id="lowercases">One lowercase character</li>
+                <li id="specials">One special character</li>
+                <li id="uppercases">One uppercase character</li>
+                <li id="lengths">8 characters minimum</li>
+                <li id="numbers">One number</li>
+            </ul></td></tr>
+
+        </table>
+        <p style="margin-left: 50px;"><button type="button" onclick="validation()" >Login</button>
+            New User?<a href="register.html">SignUp</a></p>
+            <script>
+                function validation(){
+                    id=document.getElementById("loginId").value;
+                    pass=document.getElementById("password").value;
+                    login_error_script=document.getElementById("login_error");
+                    pass_error_Script=document.getElementById("pass_error");
+                    length_error_script=document.getElementById("length_error");
+
+
+                    if(id===""){
+                        login_error.innerHTML="<span style='color:green;'>"+"Invalid Login Email";
+                        // login_error.style.textAlign="center";
+                        login_error.style.display="inline";
+                        // loginId.value="";
+                    }
+                    if(pass==""){
+                        pass_error.innerHTML="<span style='color:green;'>"+"Invalid password";
+                        // password.value="";
+                        pass_error.style.display="inline";
+                        // pass_error.style.textAlign="center";
+                    }
+                    if(pass.length<8){
+                        lengths.style.color="green";
+                        lengths.style.fontWeight="bold";
+
+                    }else{
+                        length_error.innerHTML="<span style='color:red;'>"+"password should be less than 8 letters only";
+                        password.value="";
+                      
+                    }
+
+                    for (let index = 0; index < pass.length; index++) {
+                        if(pass[i]>96){
+                            lowercases.style.color="green";
+                        // lowercases.style.fontWeight="bold";
+                        // uppercases.style.color="green"; 
+                        // uppercases.style.fontWeight="bold";
+                        // numbers.style.color="green";
+                        // numbers.style.fontWeight="bold";
+                        // specials.style.color="green";
+                        // specials.style.fontWeight="bold";
+                        }
+                        
+                    }
+
+                    // lower_case_letters=/[a-z]/g;
+                    // if(pass.match(lower_case_letters)){
+                    //     lowercases.style.color="green";
+                    //     lowercases.style.fontWeight="bold";
+                    // }else{
+                    //     lowercases.style.color="red";
+                    // }
+
+                    // upper_case_letters=/[A-Z]/g;
+                    // if(pass.match(upper_case_letters)){
+                    //     uppercases.style.color="green"; 
+                    //     uppercases.style.fontWeight="bold";
+                    // }else{
+                    //     uppercases.style.color="red";
+                    // }
+
+                    // digits_in=/[0-9]/g;
+                    // if(pass.match(digits_in)){
+                    //     numbers.style.color="green";
+                    //     numbers.style.fontWeight="bold";
+                    // }else{
+                    //     numbers.style.color="red";
+                    // }
+
+                    // special_chars=/[-,#,$,.,%,&,@,!,+,=,\,*,^,+,=,|]/g;
+                    // if(pass.match(special_chars)){
+                    //     specials.style.color="green";
+                    //     specials.style.fontWeight="bold";
+                    // }else{
+                    //     specials.style.color="red";
+                    // }
+
+                }
+                
+            </script>
+    </form>
+    </div>
+</body>
+</html>

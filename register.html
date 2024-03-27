@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            color: blue;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body >
+    <form>
+        <h1>Register Page</h1>
+        <table  style="text-align: left;">
+            <tr>
+                <td>
+                    <label for="name">Employee Name</label>
+                </td>
+                <td><input type="text" id="name" placeholder="name" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td><label for="name">Salary</label></td>
+                <td><input type="number" name="name"  placeholder="salary" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td><label for="name">Gender</label>
+                    <td><select name="name" autocomplete="off">
+                    <option value="male" >Male</option>
+                    <option value="female" >Female</option>
+                    </select></td>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="name">loginid</label></td>
+                <td><input type="text" name="name" placeholder="loginId" autocomplete="off"></td>
+               
+            </tr>
+            <tr>
+                <td><label for="name">password </label></td>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+        </table>
+        <p><button type="submit" onclick="reg()">Register</button>
+            Already user <a href="login.html">SignIn</a>
+            </p>
+    </form>
+    <script>
+        function reg(){
+            result=document.getElementById("name");
+            alert("REGISTERD SUCESSFULLY "+result.value);
+            console.log(result.value);
+        }
+    </script>
+    
+    
+</body>
+</html>
